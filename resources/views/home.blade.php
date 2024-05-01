@@ -14,7 +14,7 @@
     top: 0;
     left: 0;
   ">
-            <source src="{{ asset('/storage/' . $home->video_principal) }}" type="video/mp4">
+            <source src="/video/bg-video.mp4" type="video/mp4">
             Seu navegador não suporta o elemento de vídeo.
         </video>
         <div class="overlay"></div>
@@ -31,286 +31,57 @@
         </div>
     </div>
 
-   
-
-    <section class="ftco-section ftco-no-pb ftco-no-pt">
+     {{-- PARTE 1 --}}
+    <section class="ftco-section services-section" id="clientes">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="ftco-search d-flex justify-content-center">
-                        <div class="row">
-
-                            <div class="col-md-12 tab-wrap">
-
-                                <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel"
-                                    aria-labelledby="v-pills-nextgen-tab">
-                                    <form class="search-property-1">
-                                        <div class="row no-gutters">
-
-                                            <div id="container-pacotes" class="col-md d-flex">
-
-                                                <a href="/pacotes">
-                                                    <div id="pacotes">
-                                                        <div id="pacote-fixo">
-                                                            <img id="pacote-fixo-img" src="{{asset('/storage/pacote-fechado.webp')}}">
-                                                        </div>
-                                                        <p id="pacote-fixo-nome">{{ trans('messages.pacote_fechado') }}</p>
-                                                    </div>
-                                                </a>
-                                            
-                                                <div id="pacotes">
-                                                    <div id="pacote-comunidade">
-                                                        <img id="pacote-comunidade-img" src="{{asset('/storage/pacote-personalizado.webp')}}">
-                                                    </div>
-                                                    <p id="pacote-comunidade-nome">{{ trans('messages.pacote_personalizado') }}</p>
-                                                </div>
-                                          
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+            <div class="carousel-container">
+                <h2 style="text-align: center;">Construa autoridade exibindo seus clientes</h2>
+                <div class="carousel-slide" id="carouselSlide">
+                  <img src="images/cliente.webp" alt="Imagem do Cliente">
+                  <img src="images/cliente.webp" alt="Imagem do Cliente">
+                  <img src="images/cliente.webp" alt="Imagem do Cliente">
+                  <img src="images/cliente.webp" alt="Imagem do Cliente">
+                  <img src="images/cliente.webp" alt="Imagem do Cliente">
+                  <img src="images/cliente.webp" alt="Imagem do Cliente">
                 </div>
-            </div>
-    </section>
-
-    <div class="modal" id="meuModal">
-        <div class="modal-dialog">
-           <div class="modal-content">
-
-              <!-- Cabeçalho do Modal -->
-              <div class="modal-header">
-                 <h4 class="modal-title">{{ trans('messages.informacao_adicional') }}</h4>
-                 <button type="button" id="fechar" class="close" data-dismiss="modal">&times;</button>
-              </div>
-
-
-              <!-- Corpo do Modal -->
-              <div class="modal-body" style="max-height: 400px; overflow-y: auto;">
-                <form id="form">
-                   @csrf
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="estrangeiro">
-                        <label class="form-check-label" for="flexRadioDefault1" >
-                            {{ trans('messages.e_estrangeiro') }}
-                        </label>
-                      </div>
-
-                    <div class="mb-3" id="cpf-container">
-                        <label for="cpf"  class="form-label">CPF</label>
-                        <input type="text" id="cpf" name="cpf" class="form-control" placeholder="Digite seu CPF">
-                    </div>
-
-                      <div class="mb-3" id="uf-container">
-                        <label for="uf" class="form-label">UF</label>
-                        <input type="text" id="uf" name="uf" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">{{ trans('messages.endereco') }}</label>
-                        <input type="text" id="endereco" name="endereco" class="form-control" >
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Cep</label>
-                        <input type="text" id="cep" name="cep" class="form-control" >
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">{{ trans('messages.cidade') }}</label>
-                        <input type="text" id="cidade" name="cidade" class="form-control" >
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">{{ trans('messages.identificacao') }}</label>
-                        <input type="text" id="identificacao" name="identificacao" class="form-control" >
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">{{ trans('messages.proficao') }}</label>
-                        <input type="text" id="proficao" name="proficao" class="form-control" >
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">{{ trans('messages.nacionalidade') }}</label>
-                        <input type="text" id="nacionalidade" name="nacionalidade" class="form-control" >
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">{{ trans('messages.estado') }}</label>
-                        <input type="text" id="estado" name="estado" class="form-control" >
-                    </div>
-
-                  </form>
-
-              </div>
-
-              <!-- Rodapé do Modal -->
-              <div class="modal-footer">
-                <button id="enviardadoscomple" type="submit" class="btn btn-success" data-dismiss="modal">{{ trans('messages.enviar') }}</button>
-
-              </div>
-
-           </div>
-        </div>
-     </div>
-
-
-    <section class="ftco-section services-section">
-        <div class="container">
-            <div class="row d-flex">
-                <div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
-                    <div class="w-100">
-                        <h2 class="mb-4">{{ trans('messages.titulo_bem_vindo') }}</h2>
-                        <div class="paragrafo"> {!! nl2br(e(trans('messages.descricao_bem_vindo'))) !!}</div>
-                        <!-- <p><a href="#" class="btn btn-primary py-3 px-4">Search Destination</a></p> -->
-                    </div>
+                <div class="slide-content">
+                  <p>Descrição única para todas as imagens.</p>
                 </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                            <div class="services services-1 color-1 d-block img"
-                                style="background-image: url('{{ asset('/storage/' . $home->imagem_atividade_comunidade1) }}');">
-                                {{-- <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="flaticon-paragliding"></span></div> --}}
-                                <div class="media-body">
-                                    <h3 class="heading mb-3">{{ trans('messages.home_nome_atividade_comunidade1') }}</h3>
-                                    <p class="descricao_atividade_comunidade">
-                                        {{ trans('messages.home_descricao_atividade_comunidade1') }}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                            <div class="services services-1 color-2 d-block img"
-                                style="background-image: url('{{ asset('/storage/' . $home->imagem_atividade_comunidade2) }}');">
-                              {{--   <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="flaticon-route"></span></div> --}}
-                                <div class="media-body">
-                                    <h3 class="heading mb-3">{{ trans('messages.home_nome_atividade_comunidade2') }}</h3>
-                                    <p class="descricao_atividade_comunidade">
-                                        {{ trans('messages.home_descricao_atividade_comunidade2') }}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                            <div class="services services-1 color-3 d-block img"
-                                style="background-image: url('{{ asset('/storage/' . $home->imagem_atividade_comunidade3) }}');">
-                               {{--  <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="flaticon-tour-guide"></span></div> --}}
-                                <div class="media-body">
-                                    <h3 class="heading mb-3">{{ trans('messages.home_nome_atividade_comunidade3') }}</h3>
-                                    <p class="descricao_atividade_comunidade">
-                                        {{ trans('messages.home_descricao_atividade_comunidade3') }}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                            <div class="services services-1 color-4 d-block img"
-                                style="background-image: url('{{ asset('/storage/' . $home->imagem_atividade_comunidade4) }}');">
-                                {{-- <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="flaticon-map"></span></div> --}}
-                                <div class="media-body">
-                                    <h3 class="heading mb-3">{{ trans('messages.home_nome_atividade_comunidade4') }}</h3>
-                                    <p class="descricao_atividade_comunidade">
-                                        {{ trans('messages.home_descricao_atividade_comunidade4') }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="carousel-navigation">
+                  <button id="prevBtn">Anterior</button>
+                  <button id="nextBtn">Próximo</button>
                 </div>
-            </div>
+              </div>
         </div>
     </section>
 
-    {{-- pacotes --}}
-    <section class="ftco-section">
-        <div class="container">
-            <div class="row justify-content-center pb-4">
-                <div class="col-md-12 heading-section text-center ftco-animate">
-                    <h2 class="mb-4">{{ trans('messages.pacotes') }}</h2>
+    {{-- PARTE 2 --}}
+
+    <section class="ftco-section" id="beneficios">
+      
+        <div class="container overflow-hidden text-center">
+            <div class="row gy-5">
+              <div class="col-6">
+                <img src="images/ben.png" alt="Imagem Esquerda">
+              </div>
+              <div class="col-6">
+                <h3 class="title">Título Esquerda</h3>
+                <p class="description">Descrição Esquerda</p>
+              </div>
+
+              <div class="col-6">
+                    <h3 class="title">Título Esquerda</h3>
+                    <p class="description">Descrição Esquerda</p>
+              </div>
+              <div class="col-6">
+                <div class="image-container">
+                  <img src="images/ben.png" alt="Imagem Esquerda">
+                  <img src="images/ben.png" alt="Imagem Esquerda">
                 </div>
+              </div>
             </div>
+          </div>
 
-            <div class="row">
-
-               
-                @foreach ( $pacotes as $pacote)
-                    
-
-                <div class="col-md-4 ftco-animate">
-                    <div class="project-wrap">
-                        <a class="img" style="background-image: url('{{ asset('/storage/'. $pacote->imagem_principal) }}')">
-                            <span class="price">R$ {{$pacote->preco}} </span>
-                        </a>
-                        <div class="text p-4">
-                            <span class="days">{{$pacote->dias}} Dias de Tour</span>
-                            <h3><a>{{$pacote->nome}}</a></h3>
-                            <p class="location"><span class="fa fa-map-marker"></span> {{$pacote->comunidade->nome}}</p>
-                            <ul>
-                                <li><i class="fa fa-users"></i> 2</li>
-                                <li><span style="color: #999999" class="fa fa-calendar"></span>{{ date('d/m/y', strtotime($pacote->data))}}</li>
-                       
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                @endforeach
-
-            </div>
-        </div>
-    </section>
-
-    <section class="ftco-section" style="{{ asset('/storage/bg_3.webp') }}">
-        <div class="container">
-            <div class="row d-flex text-center">
-                <div class="col-md-12 heading-section text-center ftco-animate">
-
-                    <h2 class="mb-4">Posts</h2><br>
-                </div>
-
-                @foreach ($posts as $post)
-                    <div class="col-md-4 d-flex ftco-animate">
-                        <div class="blog-entry justify-content-end">
-                            <img class="block-20" src="{{ asset('/storage/' . $post->imagem_principal) }}">
-
-                            @php
-                                $created_at = $post->created_at;
-
-                                $datepost = $created_at->format('Y-m-d H:i:s');
-
-                                $dia = $created_at->format('d');
-                                setlocale(LC_TIME, 'pt_BR.utf8', 'pt_BR', 'portuguese');
-                                $mes = ucfirst(strftime('%B', strtotime($created_at->format('Y-m-d'))));
-                                $ano = $created_at->format('Y');
-                            @endphp
-
-                            <div class="text">
-                                <div class="d-flex align-items-center mb-4 topp">
-                                    <div class="one">
-                                        <span class="day" style="font-size:30px;">{{ $dia }}</span>
-                                    </div>
-                                    <div class="two">
-                                        <span class="yr">{{ $mes }}</span>
-                                        <span class="mos">{{ $ano }}</span>
-                                    </div>
-                                </div>
-                                <h3 class="heading"><a href="/post-{{ $datepost }}">{{ $post->titulo }}</a></h3>
-                                <p>{{ $post->descricao }}</p>
-                                <p><a href="/post-{{ $datepost }}"
-                                        class="btn btn-primary">{{ trans('messages.ler_mais') }}</a></p>
-                            </div>
-
-                        </div>
-                    </div>
-                @endforeach
-                {{-- navegação --}}
-                <div class="row mt-5">
-                    <div class="col text-center">
-                        <div class="block-27">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
     </section>
 
     <section class="ftco-section">
@@ -474,6 +245,10 @@
         </svg></div>
 
     <style>
+
+        img{
+            border-radius: 40px;
+        }
         .whatsapp-btn {
             position: fixed;
             bottom: 20px;
@@ -488,195 +263,124 @@
             width: 50px;
             height: 50px;
         }
-        @media screen and (max-width: 768px) {
-            #container-pacotes {
-                flex-direction: column;
-                text-align: center;
+
+        /* PARTE 1 */
+                
+        .carousel-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-slide {
+            display: flex;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .carousel-slide img {
+            width: 30vw; /* ajustar conforme necessário */
+            min-width: 200px; /* tamanho mínimo */
+            margin: 0 5px; /* espaçamento entre imagens */
+        }
+
+        .slide-content {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .carousel-navigation {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .carousel-navigation button {
+            padding: 5px 10px;
+            margin: 0 5px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* PARTE 2 */
+
+        #beneficios img{
+          max-width: 100%;
+         
+        }
+
+        .image-container {
+            position: relative;
             }
 
-        }
+            .image-container img {
+            width: 100%;
+            display: block;
+            }
 
-        #container-pacotes {
-            background-color: white;
-            border-radius: 20px;
-            padding: 10px;
-            margin-top: 40px;
-            border: 1px solid black;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-        }
+            .image-container img:last-child {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1; /* Coloca a segunda imagem na frente */
+            }
 
-        #pacotes {
-            display: inline-block;
-            /* Permite centralizar verticalmente */
-            padding: 10px 100px;
+            .image-container img:first-child {
+            position: relative;
+            z-index: 2; /* Coloca a primeira imagem atrás */
+            }
 
-        }
-
-        #pacote-fixo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-
-        #pacote-comunidade {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-            cursor: pointer;
-
-        }
-
-        #pacote-fixo-nome {
-            color: #f4bc08;
-            cursor: pointer;
-            font-weight: 600;
-
-        }
-
-        #pacote-comunidade-nome {
-            color: #f4bc08;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        #pacote-fixo-img {
-            width: 100px;
-            border-radius: 20px;
-            background-color: white;
-
-        }
-
-        #pacote-comunidade-img {
-            width: 100px;
-            border-radius: 20px;
-            background-color: white;
-
-        }
     </style>
 
     <script>
-        let depoimentos = @json($depoimentos);
-        let user = @json(auth()->user());
+        
+        const carouselSlide = document.getElementById('carouselSlide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
 
+        let isDown = false;
+        let startX;
+        let scrollLeft;
 
-        let avaliacoes = depoimentos.map((element) => {
-            return element.avaliação
+        carouselSlide.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - carouselSlide.offsetLeft;
+            scrollLeft = carouselSlide.scrollLeft;
         });
 
-
-        for (let index = 0; index < avaliacoes.length; index++) {
-
-            for (let i = 0; i < avaliacoes[index]; i++) {
-
-                $(`.${depoimentos[index].id}`).append(
-                    '<span style="margin-right:5px; color:#f4bc08" class="fa fa-star"></span>');
-
-            }
-
-        }
-
-        $("#pacote-comunidade-img").click(function () {
-            if(user == null){
-
-                window.location.href = '/login';
-
-            }else{
-
-            
-           
-                    if(user.endereco == null &&
-                    user.cep == null &&
-                    user.cidade == null &&
-                    user.proficao == null &&
-                    user.nacionalidade == null &&
-                    user.estado == null ){
-                       
-
-                        $("#meuModal").fadeIn();
-
-                    }else{
-
-                        window.location.href = '/pacotes_personalizados';
-
-                    }
-            }
+        carouselSlide.addEventListener('mouseleave', () => {
+            isDown = false;
         });
 
-        $('#enviardadoscomple').click(function () {
-            let formData = $('#form').serialize();
+        carouselSlide.addEventListener('mouseup', () => {
+            isDown = false;
+        });
 
+        carouselSlide.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - carouselSlide.offsetLeft;
+            const walk = (x - startX) * 3; // Ajuste da sensibilidade do movimento do mouse
+            carouselSlide.scrollLeft = scrollLeft - walk;
+        });
 
-            $.ajax({
-                type: 'POST',
-                url: '/adddadoscomple/'+ user.id,  // Substitua '/sua-rota-no-laravel' pela sua rota Laravel
-                data: formData,
-                success: function (response) {
-
-                    location.reload();
-
-                    $.ajax({
-                    type: 'POST',
-                    url: '/solicitacaocompra/'+ pacote.id,
-                    data: { _token: '{{ csrf_token() }}' },
-                    success: function (response) {
-
-                        $("#loading").hide();
-                        window.location.href = '/pacotes_personalizados';
-
-
-                    },
-                    error: function (error) {
-                        // Lógica para tratar erros (se necessário)
-                        $("#loading").hide();
-                        console.log(error);
-                    }
-                });
-
-                },
-                error: function (error) {
-                    // Lógica para tratar erros (se necessário)
-                    console.log(error);
-                }
-
+        prevBtn.addEventListener('click', () => {
+            carouselSlide.scrollBy({
+            left: -carouselSlide.clientWidth,
+            behavior: 'smooth'
             });
         });
 
-    $("#fechar").click(function () {
-
-      $("#meuModal").fadeOut();
-
-   });
-
-
+        nextBtn.addEventListener('click', () => {
+            carouselSlide.scrollBy({
+            left: carouselSlide.clientWidth,
+            behavior: 'smooth'
+            });
+        });
         
     </script>
-    <script>
-        $(document).ready(function() {
-
-            $('#estrangeiro').change(function () {
-            // Se o checkbox estiver marcado (pessoa estrangeira), oculte os campos "UF" e "CPF"
-            if ($(this).prop('checked')) {
-                $('#uf, #cpf').hide();
-            } else {
-                // Se o checkbox estiver desmarcado (pessoa não estrangeira), exiba os campos "UF" e "CPF"
-                $('#uf, #cpf').show();
-            }
-        });
-
-            // window.location.reload();
-
-            $('.portfolio-img').click(function() {
-                var src = $(this).children('img').attr('src');
-                $('#imagemModal').attr('src', src);
-                $('#modalImagem').modal('show');
-            });
-        });
-    </script>
+  
 @endsection

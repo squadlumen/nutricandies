@@ -5,6 +5,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
+  --primary:#ed7423;
+  --secondary: #901454;
+  --dark: #2B2825;
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -3635,12 +3638,15 @@ input[type="button"].btn-block {
     -ms-flex-pack: justify;
     justify-content: space-between; }
 
+
+  
+
 .navbar-brand {
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  color: #f4bc08;
+  color: #ed7423;
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap; }
@@ -3921,9 +3927,9 @@ input[type="button"].btn-block {
       color: rgba(0, 0, 0, 0.9); }
 
 .navbar-dark .navbar-brand {
-  color: #fff; }
+  color: #ed7423; }
   .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
-    color: #fff; }
+    color: #ed7423; }
 
 .navbar-dark .navbar-nav .nav-link {
   color: rgba(255, 255, 255); }
@@ -8401,7 +8407,7 @@ h1, h2, h3, h4, h5,
     margin: 0 auto;
     padding: 0; }
   .ftco-navbar-light .navbar-brand {
-    color: #f4bc08;
+    color: #ed7423;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem; }
     @media (max-width: 991.98px) {
@@ -8585,7 +8591,7 @@ h1, h2, h3, h4, h5,
       -o-transition: .3s all ease-out;
       transition: .3s all ease-out; }
     .ftco-navbar-light.scrolled .navbar-brand {
-      color: #f4bc08;
+      color: #ed7423;
       padding-top: 1rem;
       padding-bottom: 1rem; }
 
