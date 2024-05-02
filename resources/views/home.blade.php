@@ -20,7 +20,7 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
-              
+
                 <div class="col-md-7 ftco-animate">
 
                     <h1 class="mb-4">{{ trans('messages.titulo_principal') }}</h1>
@@ -58,20 +58,26 @@
     {{-- PARTE 2 --}}
 
     <section class="ftco-section" id="beneficios">
-      
+
         <div class="container overflow-hidden text-center">
             <div class="row gy-5">
+
               <div class="col-6">
                 <img src="images/ben.png" alt="Imagem Esquerda">
               </div>
+
               <div class="col-6">
-                <h3 class="title">Título Esquerda</h3>
-                <p class="description">Descrição Esquerda</p>
+                <h3 class="title">Benefício 1</h3>
+                <p class="description">Descreva de forma prática como você vai gerar
+                    este benefício para o cliente e mostre o que
+                    muda na vida dele.</p>
               </div>
 
               <div class="col-6">
-                    <h3 class="title">Título Esquerda</h3>
-                    <p class="description">Descrição Esquerda</p>
+                    <h3 class="title">Benefício 2</h3>
+                    <p class="description">Descreva de forma prática como você vai gerar
+                        este benefício para o cliente e mostre o que
+                        muda na vida dele.</p>
               </div>
               <div class="col-6">
                 <div class="image-container">
@@ -79,36 +85,52 @@
                   <img src="images/ben.png" alt="Imagem Esquerda">
                 </div>
               </div>
+
+              <div class="col-6">
+                <img src="images/ben.png" alt="Imagem Esquerda">
+              </div>
+
+              <div class="col-6">
+                <h3 class="title">Benefício 3</h3>
+                <p class="description">Descreva de forma prática como você vai gerar
+                    este benefício para o cliente e mostre o que
+                    muda na vida dele.</p>
+              </div>
+
             </div>
           </div>
 
     </section>
 
-    <section class="ftco-section">
+    <section class="ftco-section" id="features">
         <div class="container">
             <div class="row justify-content-center pb-4">
                 <div class="col-md-12 heading-section text-center ftco-animate">
-
-                    <h2 class="mb-4">{{ trans('messages.comunidades_que_atuamos') }}</h2>
+                     {{-- {{ trans('messages.comunidades_que_atuamos') }} --}}
+                    <strong> <h4 class="mb-4"> Liste aqui as principais features da sua solução</h4> </strong>
                 </div>
             </div>
 
-            @foreach ($comunidades as $comunidade)
-                <div class="row col-12" style="margin-top: 10px;">
-                    <div class="col-md-6 mx-auto">
-                        <a class="block-30 d-flex align-items-center justify-content-center"
-                            style="background-image: url('{{ asset('/storage/' . $comunidade->imagem_principal) }}'); height: 300px; width:100% ; margin-top:10px; border-radius: 50px;">
-                        </a>
-                    </div>
-                    <div class="col-md-6 mx-auto" >
-                        <div class="text" style="border-radius: 50px;">
-                            <h3 class="heading"><a>{{ $comunidade->nome }}</a></h3>
-                            <p>{{ $comunidade->titulo }}</p>
-                            <p><a href="/comunidade-1" class="btn btn-primary">{{ trans('messages.ler_mais') }}</a></p>
+            <div class="container text-center">
+                <div class="row g-2">
+                  <div class="col-4">
+                    <div class="p-3">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="images/ben.png" alt="Ícone" class="icone">
                         </div>
+                        <div class="col-9">
+                          <div class="conteudo">
+                            <h4 class="titulo">Título do Item</h4>
+                            <p class="descricao">Descrição do Item que pode ser mais longa se necessário e precisa alinhar corretamente com o título.</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
+                  <!-- Adicione mais divs col-4 conforme necessário -->
                 </div>
-            @endforeach
+              </div>
         </div>
     </section>
 
@@ -265,7 +287,7 @@
         }
 
         /* PARTE 1 */
-                
+
         .carousel-container {
             max-width: 1000px;
             margin: 20px auto;
@@ -309,7 +331,7 @@
 
         #beneficios img{
           max-width: 100%;
-         
+
         }
 
         .image-container {
@@ -333,10 +355,32 @@
             z-index: 2; /* Coloca a primeira imagem atrás */
             }
 
+        /* PARTE 3 */
+
+        /* Estilo para centralizar a imagem (ícone) */
+        .icone {
+        max-width: 130%; /* Certifica-se de que a imagem não ultrapasse a largura da coluna */
+        }
+
+        /* Estilo para o conteúdo (título e descrição) */
+        .conteudo {
+        text-align: left; /* Alinhar o texto do conteúdo à esquerda */
+        }
+
+        /* Estilo para a título */
+        .titulo {
+        margin-top: 0; /* Remover margem superior padrão do título */
+        }
+
+        /* Estilo para a descrição */
+        .descricao {
+        margin-bottom: 0; /* Remover margem inferior padrão da descrição */
+        }
+
     </style>
 
     <script>
-        
+
         const carouselSlide = document.getElementById('carouselSlide');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
@@ -380,7 +424,7 @@
             behavior: 'smooth'
             });
         });
-        
+
     </script>
-  
+
 @endsection
