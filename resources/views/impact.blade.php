@@ -66,6 +66,10 @@
             margin-bottom: 40px;
         }
 
+        h2{
+            color: #ed7423;
+        }
+
 
         .image-container {
             text-align: center;
