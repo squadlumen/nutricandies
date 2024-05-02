@@ -33,8 +33,6 @@ use App\Http\Controllers\Shopping;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/sobre', [AboutController::class, 'index']);
-
 Route::get('/impact', [AboutController::class, 'index']);
 
 Route::get('/depoimentos', [TestimonyController::class, 'index']);
@@ -113,7 +111,7 @@ Route::middleware([
     Route::get('/pacoteperso/viewcalendar', [PacksCustomControllers::class, 'viewCalendar']);
 
     // Shopping
-   
+
     Route::get('/compras-{id}', [Shopping::class, 'index']);
 
 });
