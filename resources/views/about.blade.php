@@ -4,7 +4,7 @@
 
 
 
-  <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url({{ asset('/storage/27.webp') }});
+  <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/ben.png')";
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,56 +23,66 @@
 
  <section id="sobre" class="ftco-section services-section">
    <div class="container">
-     <div class="row d-flex">
-       <div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
-        <div class="w-100">
-         <span class="subheading">{{ trans('messages.sobre_titulo') }}</span>
-         <h2 class="mb-4">{{ trans('messages.sobre') }}</h2>
-         <p class="paragrafo"> {!! nl2br(e(trans('messages.sobre_texto'))) !!}</p>
-       </div>
-     </div>
-     <div class="col-md-6">
-      <div class="row">
-       <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-         <div class="services services-1 color-1 d-block img" style="background-image: url('{{ asset('/storage/' . $sobre->imagem_atividade_comunidade1) }}');">
-           {{-- <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-paragliding"></span></div> --}}
-           <div class="media-body">
-             <h3 class="heading mb-3">{{ trans('messages.sobre_nome_atividade_comunidade1') }}</h3>
-             <p class="descricao_atividade_comunidade">{{ trans('messages.sobre_descricao_atividade_comunidade1') }}</p>
-           </div>
-         </div>
-       </div>
-       <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-         <div class="services services-1 color-2 d-block img" style="background-image: url('{{ asset('/storage/' . $sobre->imagem_atividade_comunidade2) }}');">
-           {{-- <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div> --}}
-           <div class="media-body">
-             <h3 class="heading mb-3">{{ trans('messages.sobre_nome_atividade_comunidade2') }}</h3>
-             <p class="descricao_atividade_comunidade">{{ trans('messages.sobre_descricao_atividade_comunidade2') }}</p>
-           </div>
-         </div>
-       </div>
-       <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-         <div class="services services-1 color-3 d-block img" style="background-image: url('{{ asset('/storage/' . $sobre->imagem_atividade_comunidade3) }}');">
-           {{-- <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-tour-guide"></span></div> --}}
-           <div class="media-body">
-             <h3 class="heading mb-3">{{ trans('messages.sobre_nome_atividade_comunidade3') }}</h3>
-             <p class="descricao_atividade_comunidade">{{ trans('messages.sobre_descricao_atividade_comunidade3') }}</p>
-           </div>
-         </div>
-       </div>
-       <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-         <div class="services services-1 color-4 d-block img" style="background-image: url('{{ asset('/storage/' . $sobre->imagem_atividade_comunidade4) }}');">
-           {{-- <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-map"></span></div> --}}
-           <div class="media-body">
-             <h3 class="heading mb-3">{{ trans('messages.sobre_nome_atividade_comunidade4') }}</h3>
-             <p class="descricao_atividade_comunidade">{{ trans('messages.sobre_descricao_atividade_comunidade4') }}</p>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
- </div>
+     
+    <section id="about">
+      <div class="container">
+          <h2>Sobre nós</h2>
+          <p>A Empresa XYZ é líder no fornecimento de soluções inovadoras para...</p>
+          <p>Desde sua fundação em 19XX, a Empresa XYZ tem sido uma referência no setor. Nossa jornada começou com um pequeno grupo de visionários...</p>
+          <p>Hoje, com mais de XX anos de experiência, continuamos a inovar e a oferecer soluções que transformam...</p>
+      </div>
+  </section>
+  
+  <section id="history">
+      <div class="container_main">
+          <h2>Nossa História</h2>
+          <div class="clearfix">
+              <img src="https://via.placeholder.com/200" alt="Empresa XYZ">
+              <p>Desde sua fundação em 19XX, a Empresa XYZ tem sido uma referência no setor. Nossa jornada começou com um pequeno grupo de visionários...</p>
+              <p>Hoje, com mais de XX anos de experiência, continuamos a inovar e a oferecer soluções que transformam...</p>
+          </div>
+      </div>
+  </section>
+  
+  <section id="services">
+      <div class="container_main">
+          <h2>Nossos Serviços</h2>
+          <div class="service">
+              <h3>Serviço 1</h3>
+              <p>Descrição do Serviço 1...</p>
+          </div>
+          <div class="service">
+              <h3>Serviço 2</h3>
+              <p>Descrição do Serviço 2...</p>
+          </div>
+          <div class="service">
+              <h3>Serviço 3</h3>
+              <p>Descrição do Serviço 3...</p>
+          </div>
+      </div>
+  </section>
+  
+  <section id="contact">
+      <div class="container_main">
+          <h2>Entre em Contato</h2>
+          <form>
+              <div class="form-group">
+                  <label for="name">Nome:</label>
+                  <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                  <label for="message">Mensagem:</label>
+                  <textarea id="message" name="message" required></textarea>
+              </div>
+              <button type="submit">Enviar</button>
+          </form>
+      </div>
+  </section>
+    </div>
  </section>
 
 
@@ -95,6 +105,38 @@
     </div>
   </div>
 </section>
+
+<style>
+
+.container_main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .history {
+            margin-top: 40px;
+        }
+        .history img {
+            float: left;
+            margin-right: 20px;
+            width: 200px;
+            height: auto;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+</style>
 
 
 <script>

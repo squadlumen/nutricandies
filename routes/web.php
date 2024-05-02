@@ -35,6 +35,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/sobre', [AboutController::class, 'index']);
 
+Route::get('/impact', [AboutController::class, 'index']);
+
 Route::get('/depoimentos', [TestimonyController::class, 'index']);
 
 Route::get('/faleconosco', [ContatusController::class, 'index']);
