@@ -16,7 +16,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-cTf9aImi42Xrq1zL5IU3yERgF/ZGJ8jFf0Y5SGgkPl5FtM2j4af0/TzX5lX0L/wJSsZ8trHfjW9CZGmH8ekyeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/animate.css">
@@ -59,16 +59,17 @@
                     @if (auth()->user()?->role == 'admin')
                         <li class="nav-item"><a href="/admin" class="nav-link">ADMIN</a></li>
                     @endif
-                 
+
                     @auth
-                 
-                    <li class="nav-item"><a href="/compras-{{auth()->user()->id}}" class="nav-link">{{ trans('messages.compras') }}</a></li>
+
 
                     @endauth
 
-                    <li class="nav-item"><a href="/sobre" class="nav-link">{{ trans('messages.quem_somos') }}</a></li>
+                    <li class="nav-item"><a href="/impact" class="nav-link">IMPACTO</a></li>
 
-                    <li class="nav-item">
+                    <li class="nav-item"><a href="/impact" class="nav-link">PRODUTOS</a></li>
+
+                    {{-- <li class="nav-item">
                         <div class="nav-link dropdown">
                             <button class="nav-link btn dropdown-toggle" type="button" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -80,11 +81,15 @@
                                 <a class="dropdown-item" href="/atividades">{{ trans('messages.atividades') }}</a>
                             </div>
                         </div>
-                    </li>
+                    </li> --}}
 
-                    <li class="nav-item"><a href="/faleconosco" class="nav-link">{{ trans('messages.fale_conosco_layout') }}</a></li>
+                    <li class="nav-item"><a href="/" class="nav-link">TIME</a></li>
 
-                    <li class="nav-item">
+                    <li class="nav-item"><a href="/" class="nav-link">BLOG</a></li>
+
+                    <li class="nav-item"><a href="/faleconosco" class="nav-link">FALE CONOSCO</a></li>
+
+                    {{-- <li class="nav-item">
                         <div class="nav-link dropdown">
                             <button class="nav-link btn dropdown-toggle" type="button" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -99,7 +104,7 @@
                                     href="{{ route('change.language', ['locale' => 'es']) }}">{{ trans('messages.espanhol') }}</a>
                             </div>
                         </div>
-                    </li> 
+                    </li> --}}
 
 
 

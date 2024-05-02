@@ -13,8 +13,8 @@
    <div class="container">
      <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
        <div class="col-md-9 ftco-animate pb-5 text-center">
-        <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="fa fa-chevron-right"></i></a></span> <span>{{ trans('messages.sobre_nos') }} <i class="fa fa-chevron-right"></i></span></p>
-        <h1 class="mb-0 bread">{{ trans('messages.sobre_nos') }}</h1>
+        <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="fa fa-chevron-right"></i></a></span> <span>Impacto <i class="fa fa-chevron-right"></i></span></p>
+        <h1 class="mb-0 bread">IMPACTO</h1>
         <a href="#sobre"> <i  class="fa fa-angle-double-down fa-lg" style="color: white" aria-hidden="true"></i></a>
       </div>
     </div>
@@ -23,7 +23,7 @@
 
  <section id="sobre" class="ftco-section services-section">
    <div class="container">
-     
+
     <section id="about">
       <div class="container">
           <h2>Sobre nós</h2>
@@ -32,7 +32,7 @@
           <p>Hoje, com mais de XX anos de experiência, continuamos a inovar e a oferecer soluções que transformam...</p>
       </div>
   </section>
-  
+
   <section id="history">
       <div class="container_main">
           <h2>Nossa História</h2>
@@ -43,7 +43,7 @@
           </div>
       </div>
   </section>
-  
+
   <section id="services">
       <div class="container_main">
           <h2>Nossos Serviços</h2>
@@ -61,7 +61,7 @@
           </div>
       </div>
   </section>
-  
+
   <section id="contact">
       <div class="container_main">
           <h2>Entre em Contato</h2>
