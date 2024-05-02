@@ -4,7 +4,7 @@
 
 
 
-  <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/ben.png')";
+  <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/barras-background.png')";
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,7 +14,8 @@
      <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
        <div class="col-md-9 ftco-animate pb-5 text-center">
         <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="fa fa-chevron-right"></i></a></span> <span>{{ trans('messages.sobre_nos') }} <i class="fa fa-chevron-right"></i></span></p>
-        <h1 class="mb-0 bread">{{ trans('messages.sobre_nos') }}</h1>
+        {{-- <h1 class="mb-0 bread">{{ trans('messages.sobre_nos') }}</h1> --}}
+        <h1 class="mb-0 bread">Sobre</h1>
         <a href="#sobre"> <i  class="fa fa-angle-double-down fa-lg" style="color: white" aria-hidden="true"></i></a>
       </div>
     </div>

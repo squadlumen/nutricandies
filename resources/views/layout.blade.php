@@ -55,6 +55,9 @@
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="/" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="/sobre" class="nav-link">SOBRE</a></li>
+                    <li class="nav-item"><a href="/impact" class="nav-link">IMPACT</a></li>
+                    <li class="nav-item"><a href="/onde" class="nav-link">ONDE TEM?</a></li>
 
                     @if (auth()->user()?->role == 'admin')
                         <li class="nav-item"><a href="/admin" class="nav-link">ADMIN</a></li>
@@ -66,7 +69,7 @@
 
                     @endauth
 
-                    <li class="nav-item"><a href="/sobre" class="nav-link">{{ trans('messages.quem_somos') }}</a></li>
+                    {{-- <li class="nav-item"><a href="/sobre" class="nav-link">{{ trans('messages.quem_somos') }}</a></li> --}}
 
                     <li class="nav-item">
                         <div class="nav-link dropdown">
