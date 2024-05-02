@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ImpactController;
+use App\Http\Controllers\OndeController;
 use App\Http\Controllers\TestimonyController;
 use App\Http\Controllers\TravelController;
 use App\Http\Controllers\MomentController;
@@ -33,7 +35,15 @@ use App\Http\Controllers\Shopping;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+<<<<<<< HEAD
 Route::get('/impact', [AboutController::class, 'index']);
+=======
+Route::get('/sobre', [AboutController::class, 'index']);
+
+Route::get('/impact', [ImpactController::class, 'index']);
+>>>>>>> 6c220e2 (updaload view sobre impact)
+
+Route::get('/onde', [OndeController::class, 'index']);
 
 Route::get('/depoimentos', [TestimonyController::class, 'index']);
 
@@ -71,7 +81,7 @@ Route::middleware('web')->group(function () {
 
 //PACOTES
 
- // Pacotes Fechados
+// Pacotes Fechados
 
 Route::get('/pacotes', [PacksController::class, 'index']);
 Route::get('/pacote-{pacote}', [PacksController::class, 'pack']);
@@ -85,7 +95,7 @@ Route::middleware([
     'verified',
 ])->group(function () {
 
-     // Pacotes Fechados
+    // Pacotes Fechados
 
     Route::post('/adddadoscomple/{user}', [PacksController::class, 'addDadosComple'])->name('adddadoscomple');
     Route::post('/solicitacaocompra/{pacote}', [PacksController::class, 'solicitacaoCompra']);
@@ -99,7 +109,7 @@ Route::middleware([
     Route::post('/pacoteperso/criarpacotepersonalizado', [PacksCustomControllers::class, 'createPacotePerso']);
     Route::get('/pacoteperso/enviarsolicitacao/{pacotepersonalizado}', [PacksCustomControllers::class, 'enviarSolicitacao']);
 
-    Route::middleware(['admin'])->group(function(){
+    Route::middleware(['admin'])->group(function () {
         Route::get('/pacoteperso/aprovarsolicitacao/{pacotepersonalizado}', [PacksCustomControllers::class, 'AprovarSolicitacao']);
         Route::get('/pacoteperso/reprovarsolicitacao/{pacotepersonalizado}', [PacksCustomControllers::class, 'ReprovarSolicitacao']);
     });
@@ -113,6 +123,4 @@ Route::middleware([
     // Shopping
 
     Route::get('/compras-{id}', [Shopping::class, 'index']);
-
 });
-

@@ -65,7 +65,17 @@
 
                     @endauth
 
+<<<<<<< HEAD
                     <li class="nav-item"><a href="/impact" class="nav-link">IMPACTO</a></li>
+=======
+                    {{-- <li class="nav-item"><a href="/sobre" class="nav-link">{{ trans('messages.quem_somos') }}</a></li> --}}
+                    <li class="nav-item"><a href="/sobre" class="nav-link">SOBRE</a></li>
+                    <li class="nav-item"><a href="/impact" class="nav-link">IMPACT</a></li>
+<<<<<<< HEAD
+>>>>>>> 6c220e2 (updaload view sobre impact)
+=======
+                    <li class="nav-item"><a href="/onde" class="nav-link">ONDE TEM?</a></li>
+>>>>>>> 04682a6 (Upload view - Onde Tem)
 
                     <li class="nav-item"><a href="/impact" class="nav-link">PRODUTOS</a></li>
 
