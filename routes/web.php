@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ImpactController;
 use App\Http\Controllers\TestimonyController;
 use App\Http\Controllers\TravelController;
 use App\Http\Controllers\MomentController;
@@ -33,7 +34,13 @@ use App\Http\Controllers\Shopping;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+<<<<<<< HEAD
 Route::get('/impact', [AboutController::class, 'index']);
+=======
+Route::get('/sobre', [AboutController::class, 'index']);
+
+Route::get('/impact', [ImpactController::class, 'index']);
+>>>>>>> 6c220e2 (updaload view sobre impact)
 
 Route::get('/depoimentos', [TestimonyController::class, 'index']);
 
